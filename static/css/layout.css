@@ -30,9 +30,14 @@ p, address {
     margin-bottom: 0;
 }
 
+.bullets {
+    list-style-type: circle;
+    margin-left: 20px;
+}
+
 .me {
     width: 100px;
-    height: 100px;
+    height: 110px;
     border-radius: 50px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
