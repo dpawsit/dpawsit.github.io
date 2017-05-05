@@ -44,6 +44,15 @@ p, address {
     margin-bottom: 20px;
 }
 
+.inline {
+    display: inline;
+}
+
+.description {
+    font-style: italic;
+    padding: 5px;
+}
+
 header > h1, section > h1 {
     color: #27A822;
 }
