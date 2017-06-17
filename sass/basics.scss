@@ -1,0 +1,42 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+.three-columns {
+  width: 160px;
+}
+
+.thirteen-columns{
+  width: 760px;
+}
+
+// .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+// .container { position: relative; width: 960px; margin: 0 auto; padding: 0; }
+// .container .column,
+// .container .columns { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+// .row { margin-bottom: 20px; }
+
+.container {
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  justify-content: center;
+  // flex-direction: if(true, row, column)
+  flex-direction: column
+}
+
+
+
+.profile {
+  margin: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container{
+    flex-direction: row
+  }
+}

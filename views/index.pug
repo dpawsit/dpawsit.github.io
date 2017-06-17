@@ -30,10 +30,6 @@ mixin school(name, location, date, description, description2)
   if(description2)
     p=description2
 
-block content
-  h1= title
-  p Welcome to #{title}
-
 block about
   +segment('About me')
   p I'm a passionate javascript engineer who loves making full-stack applications and seeing how every stage is built and connected to each other. Even though I'm typing on a computer, I always remember that at the other end of the screen is another person, and figuring out how to make that person's experience enjoyable and intuitive is paramount to my work.
@@ -76,3 +72,31 @@ block education
 block employment
   +segment('Employment')
   
+
+
+block profile 
+  img(
+    src= 'https://imgur.com/RRUe0Mo'
+  )
+  h1= name
+  p
+    a(
+      href= tel_full
+    )= tel
+  address
+    p= city
+    p= country
+  p
+    a(
+      href= email_full
+    )= email
+    br
+    a(
+      href= "https://github.com/" + github
+    )= "Github"
+    br
+    a(
+      href="https://linkedin.com/in/" + linkedin
+    )= "LinkedIn"
+
+    //-make all links open _blank

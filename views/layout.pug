@@ -2,12 +2,15 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
-    block about
-    block skills
-    block projects
-    block employment
-    block education
-    block interests
+    link(rel='stylesheet', href='/stylesheets/basics.css')
+  body.container
+    div.profile
+      block profile
+    div
+      block about
+      block skills
+      block projects
+      block employment
+      block education
+      block interests
+    div

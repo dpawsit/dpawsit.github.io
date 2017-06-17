@@ -1,0 +1,25 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333; }
+
+.three-columns {
+  width: 160px; }
+
+.thirteen-columns {
+  width: 760px; }
+
+.container {
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  justify-content: center;
+  flex-direction: column; }
+
+.profile {
+  margin: 50px; }
+
+@media only screen and (min-width: 768px) {
+  .container {
+    flex-direction: row; } }
+
+/*# sourceMappingURL=basics.css.map */
