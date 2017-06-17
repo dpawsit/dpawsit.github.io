@@ -1,0 +1,78 @@
+extends layout
+
+mixin segment(section) 
+  section
+  h1.heading= section
+
+mixin listItem(info)
+  li= info  
+
+mixin project(name, description, link, url)
+  article
+  header
+  h1(
+    class= 'inline'
+  )= name
+  if(link)
+    a(
+      href= url
+      target= "_blank"
+    )= link
+  p.description= description
+
+mixin school(name, location, date, description, description2)
+  article
+  header
+    h1= name
+    span= location
+    time= date
+  p= description
+  if(description2)
+    p=description2
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+block about
+  +segment('About me')
+  p I'm a passionate javascript engineer who loves making full-stack applications and seeing how every stage is built and connected to each other. Even though I'm typing on a computer, I always remember that at the other end of the screen is another person, and figuring out how to make that person's experience enjoyable and intuitive is paramount to my work.
+
+block skills
+  +segment('Technical skills')
+  p Strong: Javascript, React, MongoDB, SQL, Redux, Node, Express, RESTful APIs, HTML5,CSS, Bootstrap, Git, Webpack
+  p Experienced: Jade, Cheerio, Bcrypt, React-Native, jQuery, Bluebird, Socket.io, Angular, AWS, Lambda, Material, Auth0, JWT, Sass
+
+block projects
+  +segment('Recent Projects')
+  +project('Atexta', 'Alexa skill that allows users to send customizable group messages using voice commands', 'See the skill in action!', 'https://devpost.com/software/atexta-9gm63u')
+  ul
+    +listItem('Built web application that interfaces with the Alexa skill, allowing users to create and update their personal contacts, groups, and messages that they can send using their Alexa device')
+    +listItem('Designed, scaffolded, and built out the inner workings of the Alexa skill using the AWS Lambda service')
+    +listItem('Set up integration with Mailgun and Twilio API’s for easy usability and seamless user experience')
+  
+  +project('Pick A Flick', 'Movie recommendation service that find movies based on ratings, streaming services, and interests', 'Pick A Flick', 'http://mighty-taiga-90605.herokuapp.com/')
+  ul 
+    +listItem('Designed and built structure of website with react for fast client-side rendering of single-page application')
+    +listItem('Constructed schema, server routes, and queries for users and movies in database')
+    +listItem('Created quiz to recommend movies based on user preferences and personality')
+
+  +project('Reddicted', 'Time-management app for people addicted to reddit')
+  ul 
+    +listItem('Employed system that displays set number of reddit posts for fixed amount of time by querying their RESTful API')
+    +listItem('Implemented authentication system with Bcrypt for hashing and validating users in Mongo database')
+
+  +project('Codebang', 'Chat and development hub for software developers')
+  ul 
+    +listItem('Architected dashboard with Eventbrite integration using React and React-bootstrap components')
+    +listItem('Designed webscraper using cheerio to extract event details from Eventbrite to display in clear interface')
+    +listItem('Linked front-end calls to SQL database on AWS through Express to save and retrieve scraped data')
+  
+block education
+  +segment('Education')
+  +school('Hack Reactor', 'Los Angeles, California', ' 2016-2017', 'Advanced software engineering immersive')
+  +school('University of Southern California', 'Los Angeles, California', ' 2012-2016', 'B.A. - International Relations and the Global Economy', 'Minor - Chinese (Mandarin)')
+  
+block employment
+  +segment('Employment')
+  
