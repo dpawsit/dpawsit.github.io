@@ -1,27 +1,82 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:700,400);
 body {
-  font: 100% Helvetica, sans-serif;
-  color: #333; }
-
-.three-columns {
-  width: 160px; }
-
-.thirteen-columns {
-  width: 760px; }
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 21px;
+  color: #303030; }
 
 .container {
   display: flex;
   padding: 10px;
-  padding-right: 50px;
   margin: 10px;
   justify-content: center;
   flex-direction: column; }
 
-.profile {
-  margin: 50px; 
-}
-
 @media only screen and (min-width: 768px) {
   .container {
     flex-direction: row; } }
+a {
+  text-decoration: none; }
+
+a:visited {
+  text-decoration: none; }
+
+a:hover, a:focus {
+  color: maroon; }
+
+p, address {
+  margin-bottom: 0; }
+
+.bullets {
+  list-style-type: circle; }
+
+.picture {
+  width: 140px;
+  height: 154px;
+  border-radius: 70px;
+  -webkit-border-radius: 70px;
+  -moz-border-radius: 70px;
+  margin-bottom: 20px; }
+
+.inline {
+  display: inline; }
+
+section > h1 {
+  color: maroon;
+  font-size: 140%;
+  line-height: 120%;
+  text-transform: uppercase; }
+
+header > h1 {
+  color: maroon;
+  line-height: 100%;
+  font-size: 250%;
+  margin-bottom: 0; }
+
+article > header > h1 {
+  font-size: 112%;
+  font-weight: bold;
+  line-height: 150%;
+  margin-bottom: 0;
+  color: inherit; }
+
+.profile {
+  margin: 75px;
+  margin-top: 20px; }
+
+.third {
+  width: 150px; }
+
+em {
+  font-style: normal;
+  font-weight: bold;
+  color: #646464; }
+
+article {
+  margin-bottom: 20px;
+  margin-left: 5px; }
+
+li {
+  margin: 5px; }
 
 /*# sourceMappingURL=basics.css.map */

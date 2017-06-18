@@ -2,52 +2,53 @@ extends layout
 
 mixin segment(section) 
   section
-  h1.heading= section
+    h1= section
 
 mixin listItem(info)
-  li= info  
+  li.bullets= info  
 
 mixin project(name, description, link, url)
   article
-  header
-  h1(
-    class= 'inline'
-  )= name
-  if(link)
-    a(
-      href= url
-      target= "_blank"
-    )= link
-  p.description= description
+    header
+      h1.inline= name
+      if(link)
+        a(
+          href= url
+          target= "_blank"
+        )= ' | ' + link
+      i
+        p.description= description
 
 mixin school(name, location, date, description, description2)
   article
-  header
-    h1= name
-    span= location
-    time= date
-  p= description
-  if(description2)
-    p= description2
+    header
+      h1= name
+      em= location
+      time= date
+    p= description
+    if(description2)
+      p= description2
 
 mixin job(name, title, location, year, description, description2)
   article
-  header
-    h1= name
-    span= title + ' | ' 
-    span= location + ' | ' 
-    span=  year
-    p= description
-    p= description2
+    header
+      h1.inline= name
+      span= ' ' + title + ' | ' 
+      span= location + ' | ' 
+      span= year
+      p= description
+      p= description2
 
 block about
   +segment('About me')
-  p I'm a passionate javascript engineer who loves making full-stack applications and seeing how every stage is built and connected to each other. Even though I'm typing on a computer, I always remember that at the other end of the screen is another person, and figuring out how to make that person's experience enjoyable and intuitive is paramount to my work.
+  article
+    p I'm a passionate javascript engineer who loves making full-stack applications and seeing how every stage is built and connected to each other. Even though I'm typing on a computer, I always remember that at the other end of the screen is another person, and figuring out how to make that person's experience enjoyable and intuitive is paramount to my work.
 
 block skills
   +segment('Technical skills')
-  p Strong: Javascript, React, MongoDB, SQL, Redux, Node, Express, RESTful APIs, HTML5,CSS, Bootstrap, Git, Webpack
-  p Experienced: Jade, Cheerio, Bcrypt, React-Native, jQuery, Bluebird, Socket.io, Angular, AWS, Lambda, Material, Auth0, JWT, Sass
+  article
+    p <strong>Strong:</strong> <br/>Javascript, React, MongoDB, SQL, Redux, Node, Express, RESTful APIs, HTML5,CSS, Bootstrap, Git, Webpack
+    p <strong>Experienced:</strong> <br/> Jade, Cheerio, Bcrypt, React-Native, jQuery, Bluebird, Socket.io, Angular, AWS, Lambda, Material, Auth0, JWT, Sass
 
 block projects
   +segment('Recent Projects')
@@ -87,35 +88,40 @@ block employment
 
   
 block interests
-  h1 Other fun stuff
+  section
+    h1 Other fun stuff
   article
     p Lived in Shanghai for 8 years, spent the last few summers there as well, absolutely love the city
     p My sisters and I made a <a style="color: red;" href="https://www.youtube.com/watch?v=cgzBqMKkz1o" target="_blank"> YouTube video </a> with 14.5 million views!
     p I schooled Jimmy Kimmel in basketball on <a style="color: red;" href="https://www.youtube.com/watch?v=9m401nwWSoo" target="_blank">national TV</a> when I was 9
 
 block profile 
-  img(
-    src= 'https://imgur.com/RRUe0Mo'
-  )
-  h1= name
-  p
-    a(
-      href= tel_full
-    )= tel
-  address
-    p= city
-    p= country
-  p
-    a(
-      href= email_full
-    )= email
-    br
-    a(
-      href= "https://github.com/" + github
-      target="_blank"
-    )= "Github"
-    br
-    a(
-      href="https://linkedin.com/in/" + linkedin
-      target="_blank"
-    )= "LinkedIn"
+  header
+    img(
+      src= '/images/profile.jpg'
+    ).picture
+    h1= name
+    p
+      a(
+        href= tel_full
+      )= tel
+    address
+      p= city
+      p= country
+    p
+      a(
+        href= email_full
+      )= email
+      br
+      a(
+        href= "https://github.com/" + github
+        target="_blank"
+      )= "Github"
+      br
+      a(
+        href="https://linkedin.com/in/" + linkedin
+        target="_blank"
+      )= "LinkedIn"
+
+block space
+  div.third
