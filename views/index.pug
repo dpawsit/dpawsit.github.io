@@ -28,7 +28,17 @@ mixin school(name, location, date, description, description2)
     time= date
   p= description
   if(description2)
-    p=description2
+    p= description2
+
+mixin job(name, title, location, year, description, description2)
+  article
+  header
+    h1= name
+    span= title + ' | ' 
+    span= location + ' | ' 
+    span=  year
+    p= description
+    p= description2
 
 block about
   +segment('About me')
@@ -70,9 +80,18 @@ block education
   +school('University of Southern California', 'Los Angeles, California', ' 2012-2016', 'B.A. - International Relations and the Global Economy', 'Minor - Chinese (Mandarin)')
   
 block employment
-  +segment('Employment')
-  
+  +segment('Work Experience')
+  +job('Hack Reactor', 'Hacker in Residence (Teaching Fellow)', 'Los Angeles, California', '2017', 'Assisted junior engineers learning JS frameworks, CS fundamentals, and delivering full-stack applications', 'Conducted lectures and one-on-one sessions teaching algorithmic logic and toy problems')
+  +job('Deloitte Consulting', 'Intern, Strategy and Operations', 'Shanghai, China', '2015', 'Worked with colleagues to make proposals for major client: Shanghai Automotive Industry Corporation', 'Attended GSMA Summit as Deloitte ambassador to present findings on disruptive technology and future of mobile')
+  +job('Starbucks International', 'Intern, Financial Marketing Department', 'Shanghai, China', '2014', 'Tracked weekly mooncake sales across every region and outlet in China utilizing data analysis in Excel', 'Optimized spreadsheet formatting to highlight key sales and distribution metrics in tandem with partners; created weekly scorecard to forecast current year figures compared to prior year')
 
+  
+block interests
+  h1 Other fun stuff
+  article
+    p Lived in Shanghai for 8 years, spent the last few summers there as well, absolutely love the city
+    p My sisters and I made a <a style="color: red;" href="https://www.youtube.com/watch?v=cgzBqMKkz1o" target="_blank"> YouTube video </a> with 14.5 million views!
+    p I schooled Jimmy Kimmel in basketball on <a style="color: red;" href="https://www.youtube.com/watch?v=9m401nwWSoo" target="_blank">national TV</a> when I was 9
 
 block profile 
   img(
@@ -93,10 +112,10 @@ block profile
     br
     a(
       href= "https://github.com/" + github
+      target="_blank"
     )= "Github"
     br
     a(
       href="https://linkedin.com/in/" + linkedin
+      target="_blank"
     )= "LinkedIn"
-
-    //-make all links open _blank
