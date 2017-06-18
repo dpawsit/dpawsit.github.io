@@ -11,6 +11,7 @@ body {
     // border: 5px solid maroon;
 }
 
+
 .container {
   display: flex;
   padding: 10px;
@@ -19,11 +20,18 @@ body {
   flex-direction: column
 }
 
-@media only screen and (min-width: 768px) {
-  .container{
+@media only screen and (min-width: 801px){
+   .container{
     flex-direction: row
-  }
+  }   
 }
+
+
+// @media only screen and (min-width: 768px) {
+//   .container{
+//     flex-direction: row
+//   }
+// }
 
 a {
     text-decoration: none;

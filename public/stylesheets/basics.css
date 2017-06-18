@@ -12,9 +12,10 @@ body {
   justify-content: center;
   flex-direction: column; }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 801px) {
   .container {
     flex-direction: row; } }
+    
 a {
   text-decoration: none; }
 
