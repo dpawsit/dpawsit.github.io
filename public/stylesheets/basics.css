@@ -15,7 +15,6 @@ body {
 @media only screen and (min-width: 801px) {
   .container {
     flex-direction: row; } }
-    
 a {
   text-decoration: none; }
 
@@ -37,31 +36,35 @@ p, address {
   border-radius: 70px;
   -webkit-border-radius: 70px;
   -moz-border-radius: 70px;
-  margin-bottom: 20px; }
+  margin: auto; }
 
 .inline {
   display: inline; }
 
-section > h1 {
+section h1 {
   color: maroon;
   font-size: 140%;
   line-height: 120%;
   text-transform: uppercase; }
 
-header > h1 {
+article {
+  margin-bottom: 20px;
+  margin-left: 5px; }
+  article header h1 {
+    font-size: 112%;
+    font-weight: bold;
+    line-height: 150%;
+    margin-bottom: 0;
+    color: inherit; }
+
+header h1 {
   color: maroon;
   line-height: 100%;
   font-size: 250%;
   margin-bottom: 0; }
 
-article > header > h1 {
-  font-size: 112%;
-  font-weight: bold;
-  line-height: 150%;
-  margin-bottom: 0;
-  color: inherit; }
-
 .profile {
+  text-align: center;
   margin: 75px;
   margin-top: 20px; }
 
@@ -72,10 +75,6 @@ em {
   font-style: normal;
   font-weight: bold;
   color: #646464; }
-
-article {
-  margin-bottom: 20px;
-  margin-left: 5px; }
 
 li {
   margin: 5px; }
